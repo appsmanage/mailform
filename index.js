@@ -4,12 +4,9 @@ var key = params.get('key');
 $(function () {
     // 送信
     $('form').submit(function () {
-        var reasons = $('textarea[name="reasons"]').val();
-        // var date = $('input[name="date"]').val();
-        // var tool = $('input[name="tool"]').val();
-        
-        //var msg = `${key}\nお問合せ内容：${reasons}\n返信期限：${date}\n使用ツール：${tool}`;
-        var msg = `${key}\n内容：${reasons}`;
+        var inquiry = $('textarea[name="inquiry"]').val();
+        var email = $('input[name="email"]').val();
+        var msg = `${key}\nお問い合わせ内容：${inquiry}`;
         sendText(msg);
 
         return false;
